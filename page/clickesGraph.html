@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+	<meta charset="utf-8">
+    <title>Теория графов</title>
+	<link href="../css/style.css" rel="stylesheet" type="text/css" />
+	<script src="../js/jquery-1.11.2.min.js"></script>
+	<script src="../js/jointFunction.js"></script>
+	<script src="../js/clickesGraph.js"></script>
+</head>
+<body>
+
+	<h1>Теория графов</h1>
+	
+	<h2>Клики неориентированного графа</h2>
+	
+	<noscript>
+		<div class="infoNoScript">
+			<h3>Уделите внимание этой записи!</h3>
+
+            <p>Эти веб-страницы активно используют язык программирования "JavaScript", но Ваш браузер,
+            не исполняет программный код этого языка программиования, возможно, по двум причинам:</p>
+
+                <ul>
+                    <li>Ваш браузер не поддерживает исполнение языка программирования "JavaScript";</li>
+                    <li>В Вашем браузере отключено исполнение языка программирования "JavaScript";</li>
+                </ul>
+
+            <p>Чтобы использовать данные веб-страницы по назначению, воспользуйтесь другим
+            браузером или включите исполнение языка программирования "JavaScript" в настройках Вашего браузера.</p>
+		</div>
+	</noscript>
+	
+	<a href="../index.html" class="back_to_main"> << Вернуться на главную страницу</a>
+	<br /><br />
+	
+	<div>
+		<span class="bold">Описание:</span> Данный алгоритм предназначен для того, чтобы найти клики <span class="undirected">неориентированного графа</span>. <br />
+		Клика - максимально большой полный подграф графа.
+	</div>
+	
+	
+	<div>
+	
+		<div id="step1">
+			<p class="bold">1 шаг:</p>
+			<label for="countVertex">Введите количество вершин в графе:</label>
+			<input type="text" id="countVertex" class="textEdit" value="0" />
+			<button id="btn_confirm_step_one">Подтвердить</button>
+		</div>
+		
+		<div id="step2">
+			<p class="bold">2 шаг:</p>
+			<label>Вершины обозначены числами или буквами?</label><br />
+			<input type="radio" name="typeNumber" id="number" value="number" checked="checked" /> <label for="number">Числами</label> <br />
+			<input type="radio" name="typeNumber" id="letter" value="letter" /> <label for="letter">Буквами</label> <br /><br />
+			<button id="btn_confirm_step_two">Подтвердить</button>
+		</div>
+		
+		<div id="step3">
+			<p class="bold">3 шаг:</p>
+			<p>Введите цифру "1" в те ячейки, где есть ребро из одной вершины в другую</p>
+			<table id="matrixContiguity"></table>
+			<br />
+			
+			<button id="btn_confirm_matrix" class="btn-result">Получить результат</button>
+			<br />
+		</div>
+		
+		<div id="step4">
+			<p class="bold">Ответ:</p>
+			<div id="resultMatrixContiguity"></div>
+		</div>
+		
+		<div class="bottom_emty"></div>
+		
+	</div>
+
+</body>
+</html>
